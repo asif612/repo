@@ -1,7 +1,7 @@
 pipeline {
     agent { label 'My-Pipeline' }
     stages {
-        stage('build') {
+        stage('checkout') {
             steps {
                 sh 'pwd'
                 sh 'mvn --version'
