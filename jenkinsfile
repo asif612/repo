@@ -1,16 +1,19 @@
 pipeline {
-    agent { label 'pip' } 
+    agent none 
     stages {
-        stage { 'checkout' } 
-        { 
-            steps 
-            {
-               step 
-               {
-                echo 'Hello, Git'
-                sh "git clone https://github.com/lohitesh/hello-world-war"
+        stage('Example Build') {
+            agent { docker 'maven:3.8.1-adoptopenjdk-11' } 
+            steps {
+                echo 'Hello, Maven'
+                sh 'mvn --version'
             }
         }
+        stage('Example Test') {
+            agent { docker 'openjdk:8-jre' } 
+            steps {
+                echo 'Hello, JDK'
+                sh 'java -version'
             }
-      }
+        }
+    }
 }
