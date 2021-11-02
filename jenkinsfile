@@ -1,9 +1,12 @@
 pipeline {
     agent { label 'pip' } 
     stages {
-        stage('checkout') { 
-            steps {
-               step {
+        stage { 'checkout' } 
+        { 
+            steps 
+            {
+               step 
+               {
                 echo 'Hello, Git'
                 sh "git clone https://github.com/lohitesh/hello-world-war"
             }
