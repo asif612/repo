@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('checkout') { 
             steps {
-                echo 'Hello, Maven'
+                echo 'Hello, Git'
                 sh "git clone https://github.com/lohitesh/hello-world-war"
             }
         }
