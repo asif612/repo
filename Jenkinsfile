@@ -1,8 +1,10 @@
 pipeline {
-    agent { docker { image 'maven:3.3.3' } }
+    agent { label 'New' }
     stages {
         stage('build') {
             steps {
+                sh 'pwd'
+                sh 'echo welcome'
                 sh 'mvn --version'
             }
         }
