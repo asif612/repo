@@ -1,1 +1,11 @@
-
+pipeline {
+    agent { label 'pip' } 
+    stages {
+        stage('checkout') { 
+            steps {
+                echo 'Hello, Maven'
+                sh "git clone https://github.com/lohitesh/hello-world-war"
+            }
+        }
+            }
+      }
