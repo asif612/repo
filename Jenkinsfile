@@ -1,10 +1,9 @@
 pipeline {
-    agent { label 'New' }
+    agent { label ' }
     stages {
         stage('build') {
             steps {
                 sh 'pwd'
-                sh 'echo welcome'
                 sh 'mvn --version'
             }
         }
